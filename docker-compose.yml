@@ -3,8 +3,10 @@ services:
   xammp:
     image: tomsik68/xampp:8
     volumes:
-      - ./exiadrink:/www/exiadrink 
-      - ./exiadiscount:/www/exiadiscount 
+      - ./exiadrink/www:/www/exiadrink/www 
+      - ./exiadrink/www:/www/exiadrink/logs
+      - ./exiadiscount/www:/www/exiadiscount/www 
+      - ./exiadiscount/logs:/www/exiadiscount/logs 
       - ./apache_conf/apache.docker.conf:/opt/lampp/apache2/conf.d/exia.conf
     ports:
       - "22:22"
