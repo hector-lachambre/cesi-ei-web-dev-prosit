@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  xammp:
+    image: tomsik68/xampp:8
+    volumes:
+      - ./exiadrink:/www/exiadrink 
+      - ./exiadiscount:/www/exiadiscount 
+      - ./apache_conf/apache.docker.conf:/opt/lampp/apache2/conf.d/exia.conf
+    ports:
+      - "22:22"
+      - "80:80"

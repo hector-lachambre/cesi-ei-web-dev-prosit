@@ -1,0 +1,7 @@
+AuthUserFile ../users
+AuthName "Zone protégée du exiadiscount.com"
+AuthType Basic
+require valid-user
+# Order Deny,Allow
+# Deny from all
+# Allow from 172.26.0.1

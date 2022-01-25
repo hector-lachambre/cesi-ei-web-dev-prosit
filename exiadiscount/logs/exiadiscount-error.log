@@ -1,0 +1,10 @@
+[Tue Jan 25 17:43:17.854013 2022] [include:warn] [pid 82] [client 172.24.0.1:56510] AH01374: mod_include: Options +Includes (or IncludesNoExec) wasn't set, INCLUDES filter removed: /index.html
+[Tue Jan 25 17:43:18.117892 2022] [include:warn] [pid 82] [client 172.24.0.1:56510] AH01374: mod_include: Options +Includes (or IncludesNoExec) wasn't set, INCLUDES filter removed: /index.html
+[Tue Jan 25 17:43:31.481497 2022] [access_compat:error] [pid 85] [client 172.24.0.1:56512] AH01797: client denied by server configuration: /www/exiadiscount/www/private/, referer: http://exiadiscount.com/
+[Tue Jan 25 17:47:09.925710 2022] [include:warn] [pid 74] [client 172.26.0.1:56524] AH01374: mod_include: Options +Includes (or IncludesNoExec) wasn't set, INCLUDES filter removed: /index.html
+[Tue Jan 25 17:47:10.540714 2022] [include:warn] [pid 74] [client 172.26.0.1:56524] AH01374: mod_include: Options +Includes (or IncludesNoExec) wasn't set, INCLUDES filter removed: /index.html
+[Tue Jan 25 17:47:11.028981 2022] [include:warn] [pid 74] [client 172.26.0.1:56524] AH01374: mod_include: Options +Includes (or IncludesNoExec) wasn't set, INCLUDES filter removed: /index.html
+[Tue Jan 25 17:47:11.378326 2022] [include:warn] [pid 74] [client 172.26.0.1:56524] AH01374: mod_include: Options +Includes (or IncludesNoExec) wasn't set, INCLUDES filter removed: /index.html
+[Tue Jan 25 17:47:12.965380 2022] [access_compat:error] [pid 74] [client 172.26.0.1:56524] AH01797: client denied by server configuration: /www/exiadiscount/www/private/, referer: http://exiadiscount.com/
+[Tue Jan 25 17:47:14.733243 2022] [access_compat:error] [pid 74] [client 172.26.0.1:56524] AH01797: client denied by server configuration: /www/exiadiscount/www/private/, referer: http://exiadiscount.com/
+[Tue Jan 25 17:47:15.337624 2022] [access_compat:error] [pid 74] [client 172.26.0.1:56524] AH01797: client denied by server configuration: /www/exiadiscount/www/private/, referer: http://exiadiscount.com/
