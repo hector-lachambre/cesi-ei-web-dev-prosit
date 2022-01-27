@@ -40,6 +40,12 @@ Pour ajouter un utilisateur avec XAMPP
 C:/xampp/apache/bin/htpasswd.exe ./exiadiscount/users <user>
 ```
 
+Sous XAMPP, vous devez changer le chemin vers le fichier `users` dans le fichier `.htaccess` pour qu'il respecte votre dossier de travail
+
+```apache
+AuthUserFile <chemin absolu vers le fichier users>
+```
+
 Pour les adeptes de Docker :
 
 * Bind le fichier `./exiadiscount/users` dans le conteneur
