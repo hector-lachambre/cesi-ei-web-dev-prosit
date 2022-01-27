@@ -7,6 +7,7 @@ services:
       - ./exiadrink/logs:/www/exiadrink/logs
       - ./exiadiscount/www:/www/exiadiscount/www 
       - ./exiadiscount/logs:/www/exiadiscount/logs 
+      - ./exiadiscount/users:/www/exiadiscount/users
       - ./apache_conf/apache.docker.conf:/opt/lampp/apache2/conf.d/exia.conf
     ports:
       - "22:22"
