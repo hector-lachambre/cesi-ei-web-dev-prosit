@@ -1,196 +1,197 @@
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>eXiaDiscount | Facturation</title>
-  </head>
-  <body>
-    <header>
-      <h1>Facture</h1>
-      <p>Bienvenue chez Nous.</p>
-    </header>
 
-    <nav>
-      <a href="#">Link1</a>
-      <a href="#">Link2</a>
-      <a href="#">Link3</a>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eXiaDiscount | Facturation</title>
+</head>
 
-    <main>
-      <section>
-        <h2>Fournisseur</h2>
-        <form action="#" method="post">
-          <fieldset>
-            <legend>Fournisseur : ?</legend>
-            <select>
-              <option value="f1">Fournisseur 1</option>
-              <option value="f2">Fournisseur 2</option>
-              <option value="f3">Fournisseur 3</option>
-              <option value="f4">Fournisseur 4</option>
+<body>
+  <header>
+    <h1>Facture</h1>
+    <p>Bienvenue chez Nous.</p>
+  </header>
+
+  <nav>
+    <a href="#">Link1</a>
+    <a href="#">Link2</a>
+    <a href="#">Link3</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Fournisseur</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Fournisseur : ?</legend>
+          <select>
+            <option value="f1">Fournisseur 1</option>
+            <option value="f2">Fournisseur 2</option>
+            <option value="f3">Fournisseur 3</option>
+            <option value="f4">Fournisseur 4</option>
+          </select>
+        </fieldset>
+      </form>
+    </section>
+    <section>
+      <h2>Formulaire</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Information : ?</legend>
+
+          <input type="radio" name="type" value="perso" id="perso" />
+          <label for="perso">Personnel</label>
+
+          <input type="radio" name="type" value="prof" id="prof" checked />
+          <label for="prof">Professionel</label>
+
+          <br />
+          <br />
+
+          <label>
+            N° TVA :<br />
+            <input type="text" name="tva" />
+          </label>
+
+          <br /><br />
+
+          <label>
+            Prénom :<br />
+            <input type="text" name="firstname" />
+          </label>
+
+          <br /><br />
+
+          <label>
+            Nom :<br />
+            <input type="text" name="lastname" />
+          </label>
+
+          <br /><br />
+
+          <div>
+            <label>
+              <input type="radio" name="gender" value="male" checked />
+              Male </label><br />
+            <label>
+              <input type="radio" name="gender" value="female" />
+              Female </label><br />
+            <label>
+              <input type="radio" name="gender" value="other" />
+              Other
+            </label>
+          </div>
+
+          <br />
+
+          <label>
+            Email :<br />
+            <input type="text" name="mail" />
+          </label>
+
+          <br /><br />
+
+          <label>
+            N° Téléphone :<br />
+            <input type="text" name="phone" />
+          </label>
+
+          <br /><br />
+
+          <label>
+            Adresse :<br />
+            <input type="textarea" name="adresse" />
+          </label>
+
+          <br /><br />
+
+          <label>
+            Provinces :<br />
+            <select name="region" id="region">
+              <option value="">....</option>
+              <option value="f2">Hainaut</option>
+              <option value="f3">Brabant Wallon</option>
+              <option value="f4">Liège</option>
+              <option value="f4">Namur</option>
             </select>
-          </fieldset>
-        </form>
-      </section>
-      <section>
-        <h2>Formulaire</h2>
-        <form action="#" method="post">
-          <fieldset>
-            <legend>Information : ?</legend>
+          </label>
 
-            <input type="radio" name="type" value="perso" id="perso" />
-            <label for="perso">Personnel</label>
+          <br /><br />
 
-            <input type="radio" name="type" value="prof" id="prof" checked />
-            <label for="prof">Professionel</label>
+          <label>
+            Ville :<br />
+            <input type="text" name="Ville" />
+          </label>
 
-            <br />
-            <br />
+          <br /><br />
 
-            <label>
-              N° TVA :<br />
-              <input type="text" name="tva" />
-            </label>
+          <label>
+            Code postale :<br />
+            <input type="text" name="code" />
+          </label>
 
-            <br /><br />
+          <br /><br /><br />
 
-            <label>
-              Prénom :<br />
-              <input type="text" name="firstname" />
-            </label>
+          <input type="submit" />&nbsp;<input type="reset" />
+        </fieldset>
+      </form>
 
-            <br /><br />
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Paiement : ?</legend>
 
-            <label>
-              Nom :<br />
-              <input type="text" name="lastname" />
-            </label>
+          <label>
+            Numéro de carte :
+            <input type="text" name="num_carte" />
+          </label>
 
-            <br /><br />
+          <label>
+            Propriétaire :
+            <input type="text" name="owner" style="width: 140px" />
+          </label>
 
-            <div>
-              <label>
-                <input type="radio" name="gender" value="male" checked />
-                Male </label
-              ><br />
-              <label>
-                <input type="radio" name="gender" value="female" />
-                Female </label
-              ><br />
-              <label>
-                <input type="radio" name="gender" value="other" />
-                Other
-              </label>
-            </div>
+          <br />
 
-            <br />
+          <label>
+            Date expiration :
+            <select name="month" style="width: 50px">
+              <option></option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>&nbsp;/&nbsp;
+            <select name="year" style="width: 50px">
+              <option></option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+            </select>
+          </label>
 
-            <label>
-              Email :<br />
-              <input type="text" name="mail" />
-            </label>
+          <label>
+            CVV :
+            <input type="text" name="cvv" id="cvv" style="width: 41px" />
+          </label>
 
-            <br /><br />
+          <br /><br />
 
-            <label>
-              N° Téléphone :<br />
-              <input type="text" name="phone" />
-            </label>
+          <input type="submit" />&nbsp;<input type="reset" />
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
 
-            <br /><br />
-
-            <label>
-              Adresse :<br />
-              <input type="textarea" name="adresse" />
-            </label>
-
-            <br /><br />
-
-            <label>
-              Provinces :<br />
-              <select name="region" id="region">
-                <option value="">....</option>
-                <option value="f2">Hainaut</option>
-                <option value="f3">Brabant Wallon</option>
-                <option value="f4">Liège</option>
-                <option value="f4">Namur</option>
-              </select>
-            </label>
-
-            <br /><br />
-
-            <label>
-              Ville :<br />
-              <input type="text" name="Ville" />
-            </label>
-
-            <br /><br />
-
-            <label>
-              Code postale :<br />
-              <input type="text" name="code" />
-            </label>
-
-            <br /><br /><br />
-
-            <input type="submit" />&nbsp;<input type="reset" />
-          </fieldset>
-        </form>
-
-        <form action="#" method="post">
-          <fieldset>
-            <legend>Paiement : ?</legend>
-
-            <label>
-              Numéro de carte :
-              <input type="text" name="num_carte" />
-            </label>
-
-            <label>
-              Propriétaire :
-              <input type="text" name="owner" style="width: 140px" />
-            </label>
-
-            <br />
-
-            <label>
-              Date expiration :
-              <select name="month" style="width: 50px">
-                <option></option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-                <option>05</option>
-                <option>06</option>
-                <option>07</option>
-                <option>08</option>
-                <option>09</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-              </select>&nbsp;/&nbsp;
-              <select name="year" style="width: 50px">
-                <option></option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
-                <option>24</option>
-              </select>
-            </label>
-
-            <label>
-              CVV :
-              <input type="text" name="cvv" id="cvv" style="width: 41px" />
-            </label>
-
-            <br /><br />
-
-            <input type="submit" />&nbsp;<input type="reset" />
-          </fieldset>
-        </form>
-      </section>
-    </main>
-  </body>
 </html>
