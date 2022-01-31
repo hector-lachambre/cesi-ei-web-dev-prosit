@@ -5,193 +5,206 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>eXiaDiscount | Facturation</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/desktop.css" media="screen and (min-width: 959px)">
+
 </head>
 
 <body>
-  <header>
-    <h1>Facture</h1>
-    <p>Bienvenue chez Nous.</p>
+  <header class="header">
+    <h1 class="header__title">Facture</h1>
+    <p class="header__subtitle">Bienvenue chez Nous.</p>
   </header>
 
-  <nav>
-    <a href="#">Link1</a>
-    <a href="#">Link2</a>
-    <a href="#">Link3</a>
-  </nav>
-
   <main>
-    <section>
-      <h2>Fournisseur</h2>
+    <section class="section">
+      <header class="title">Choix du fournisseur</header>
+
       <form action="#" method="post">
-        <fieldset>
-          <legend>Fournisseur : ?</legend>
-          <select>
-            <option value="f1">Fournisseur 1</option>
-            <option value="f2">Fournisseur 2</option>
-            <option value="f3">Fournisseur 3</option>
-            <option value="f4">Fournisseur 4</option>
-          </select>
-        </fieldset>
+
+        <div class="input-group">
+        <select class="input">
+          <option class="input__option" value="f1">Fournisseur 1</option>
+          <option class="input__option" value="f2">Fournisseur 2</option>
+          <option class="input__option" value="f3">Fournisseur 3</option>
+          <option class="input__option" value="f4">Fournisseur 4</option>
+        </select>
+      </div>
+        
+        <div class="input-group input-group--inline">
+          <input disabled class="input-button input-button--primary" type="submit" value="Suivant" />
+        </div>
+
       </form>
     </section>
-    <section>
-      <h2>Formulaire</h2>
+    <section class="section">
+      <header class="title">Informations personnelles</header>
       <form action="#" method="post">
-        <fieldset>
-          <legend>Information : ?</legend>
+        <div class="input-group input-group--inline">
 
-          <input type="radio" name="type" value="perso" id="perso" />
-          <label for="perso">Personnel</label>
-
-          <input type="radio" name="type" value="prof" id="prof" checked />
-          <label for="prof">Professionel</label>
-
-          <br />
-          <br />
-
-          <label>
-            N° TVA :<br />
-            <input type="text" name="tva" />
-          </label>
-
-          <br /><br />
-
-          <label>
-            Prénom :<br />
-            <input type="text" name="firstname" />
-          </label>
-
-          <br /><br />
-
-          <label>
-            Nom :<br />
-            <input type="text" name="lastname" />
-          </label>
-
-          <br /><br />
-
-          <div>
-            <label>
-              <input type="radio" name="gender" value="male" checked />
-              Male </label><br />
-            <label>
-              <input type="radio" name="gender" value="female" />
-              Female </label><br />
-            <label>
-              <input type="radio" name="gender" value="other" />
-              Other
-            </label>
+          <div class="input-radio">
+            <input type="radio" name="type" value="perso" id="perso" />
+            <label class="input-group__label" for="perso">Personnel</label>
           </div>
 
-          <br />
+          <div class="input-radio">
+            <input type="radio" name="type" value="prof" id="prof" checked />
+            <label class="input-group__label" for="prof">Professionel</label>
+          </div>
+        </div>
 
-          <label>
-            Email :<br />
-            <input type="text" name="mail" />
-          </label>
+        <div class="input-group">
+          <label class="input-group__label" for="tva">N° TVA :</label>
+          <input class="input" type="text" name="tva" id="tva" placeholder="0000123456789" />
+        </div>
 
-          <br /><br />
+        <div class="input-group">
+          <label class="input-group__label" for="firstname">Prénom :</label>
+          <input class="input" type="text" name="firstname" id="firstname" placeholder="Jean" />
+        </div>
 
-          <label>
-            N° Téléphone :<br />
-            <input type="text" name="phone" />
-          </label>
+        <div class="input-group">
+          <label class="input-group__label" for="lastname">Nom :</label>
+          <input class="input" type="text" name="lastname" id="lastname" placeholder="MARTIN" />
+        </div>
 
-          <br /><br />
+        <div class="input-group input-group--inline">
 
-          <label>
-            Adresse :<br />
-            <input type="textarea" name="adresse" />
-          </label>
+          <div class="input-radio">
+            <input type="radio" name="gender" value="male" id="male" />
+            <label class="input-group__label" for="male">Homme</label>
+          </div>
 
-          <br /><br />
+          <div class="input-radio">
+            <input type="radio" name="gender" value="female" id="female" checked />
+            <label class="input-group__label" for="female">Femme</label>
+          </div>
 
-          <label>
-            Provinces :<br />
-            <select name="region" id="region">
-              <option value="">....</option>
-              <option value="f2">Hainaut</option>
-              <option value="f3">Brabant Wallon</option>
-              <option value="f4">Liège</option>
-              <option value="f4">Namur</option>
-            </select>
-          </label>
+          <div class="input-radio">
+            <input type="radio" name="gender" value="other" id="other" checked />
+            <label class="input-group__label" for="other">Autre</label>
+          </div>
+        </div>
 
-          <br /><br />
 
-          <label>
-            Ville :<br />
-            <input type="text" name="Ville" />
-          </label>
+        <div class="input-group">
+          <label class="input-group__label" for="lastname">Email :</label>
+          <input class="input" type="text" name="mail" id="mail" placeholder="jean.martin@exiadiscount.fr" />
+        </div>
 
-          <br /><br />
 
-          <label>
-            Code postale :<br />
-            <input type="text" name="code" />
-          </label>
 
-          <br /><br /><br />
+        <div class="input-group">
+          <label class="input-group__label" for="lastname">Téléphone :</label>
+          <input class="input" type="text" name="phone" id="phone" placeholder="00 11 22 33 44" />
+        </div>
 
-          <input type="submit" />&nbsp;<input type="reset" />
-        </fieldset>
+
+        <div class="input-group">
+          <label class="input-group__label" for="address">Adresse :</label>
+          <textarea class="input" text="text" name="address" id="address" placeholder="1 rue des lilas"
+            rows="3"></textarea>
+        </div>
+
+
+        <div class="input-group">
+          <label class="input-group__label" for="city">Ville :</label>
+          <input class="input" text="text" name="city" id="city" placeholder="Dijon" />
+        </div>
+
+
+        <div class="input-group">
+          <label class="input-group__label" for="code">Code postale :</label>
+          <input class="input" text="text" name="code" id="code" placeholder="21000" />
+        </div>
+
+        <div class="input-group input-group--inline">
+          <input class="input-button input-button--primary" type="submit" value="Suivant" disabled />
+          <input class="input-button" type="reset" />
+        </div>
       </form>
+    </section>
+
+    <section class="section">
+      <header class="title">Paiement</header>
 
       <form action="#" method="post">
-        <fieldset>
-          <legend>Paiement : ?</legend>
 
-          <label>
-            Numéro de carte :
-            <input type="text" name="num_carte" />
-          </label>
 
-          <label>
-            Propriétaire :
-            <input type="text" name="owner" style="width: 140px" />
-          </label>
 
-          <br />
+        <div class="input-group">
+          <label class="input-group__label" for="card_number">Numéro de carte :</label>
+          <input class="input" text="text" name="card_number" id="card_number" placeholder="0000 1111 2222 3333 4444" />
+        </div>
 
-          <label>
-            Date expiration :
-            <select name="month" style="width: 50px">
-              <option></option>
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-              <option>04</option>
-              <option>05</option>
-              <option>06</option>
-              <option>07</option>
-              <option>08</option>
-              <option>09</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-            </select>&nbsp;/&nbsp;
-            <select name="year" style="width: 50px">
-              <option></option>
-              <option>20</option>
-              <option>21</option>
-              <option>22</option>
-              <option>23</option>
-              <option>24</option>
-            </select>
-          </label>
 
-          <label>
-            CVV :
-            <input type="text" name="cvv" id="cvv" style="width: 41px" />
-          </label>
+        <div class="input-group">
+          <label class="input-group__label" for="owner">Propriétaire :</label>
+          <input class="input" text="text" name="owner" id="owner" placeholder="Jean MARTIN" />
+        </div>
+        <div class="input-group input-group--inline">
+          <div class="input-group">
+            <label class="input-group__label">
+              Expiration :
+            </label>
+            <div class="input-group__subgroup input-group__subgroup--center">
+              <select class="input" name="month">
+                <option>..</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+              </select>
+              <div class="input-group__separator">/</div>
+              <select class="input" name="year">
+                <option>..</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+              </select>
+            </div>
+          </div>
 
-          <br /><br />
+          <div class="input-group">
+            <label class="input-group__label" for="cvv">Crypto.</label>
+            <input class="input" type="password" name="cvv" id="cvv" placeholder="CVV" />
+          </div>
+        </div>
 
-          <input type="submit" />&nbsp;<input type="reset" />
-        </fieldset>
+        <div class="input-group input-group--inline">
+          <input class="input-button input-button--primary" type="submit" />
+          <input class="input-button" type="reset" />
+        </div>
+
       </form>
     </section>
   </main>
+
+  <div class="menu">
+
+    <div class="menu__placeholder"></div>
+    <nav class="menu__navigation">
+      <a href="#" class="menu__item menu__item--active">
+        <span class="menu__icon material-icons">shopping_basket</span><span class="menu__label">Facturation</span>
+      </a>
+      <a href="#" class="menu__item">
+        <span class="menu__icon material-icons">card_giftcard</span><span class="menu__label">Link 2</span></a>
+      <a href="#" class="menu__item">
+        <span class="menu__icon material-icons">import_contacts</span><span class="menu__label">Link 3</span>
+      </a>
+    </nav>
+  </div>
 </body>
 
 </html>
