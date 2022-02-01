@@ -11,3 +11,29 @@ main {
     max-width: 600px;
     border-radius: 3px;
 }
+
+/* --- Menu Component --- */
+
+.menu {
+    display: none;
+}
+
+.menu.menu--desktop {
+    display: flex;
+    width: 100%;
+    background-color: white;
+}
+
+.menu.menu--desktop > .menu__navigation {
+    position: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.menu.menu--desktop .menu__item {
+    flex: 0 0 200px;
+}
+
+.menu.menu--desktop .menu__item:hover {
+    background-color: var(--primary-color);
+}
