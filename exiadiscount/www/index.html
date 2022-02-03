@@ -29,11 +29,11 @@
     </div>
   </header>
 
-  <main>
-    <section class="section">
+  <main class="js-stepper">
+    <section class="section js-stepper__step">
       <header class="title">Choix du fournisseur</header>
 
-      <form action="#" method="post">
+      <form action="javascript:void(0)" method="post" class="js-stepper__form">
 
         <div class="input-group">
           <select class="input">
@@ -45,14 +45,14 @@
         </div>
 
         <div class="input-group input-group--inline">
-          <input disabled class="input-button input-button--primary" type="submit" value="Suivant" />
+          <input class="input-button input-button--primary js-stepper__submit-action" type="submit" value="Suivant" />
         </div>
 
       </form>
     </section>
-    <section class="section">
+    <section class="section js-stepper__step">
       <header class="title">Informations personnelles</header>
-      <form action="#" method="post">
+      <form action="javascript:void(0)" method="post" class="js-stepper__form">
         <div class="input-group input-group--inline">
 
           <div class="input-radio">
@@ -67,101 +67,100 @@
         </div>
 
         <div class="input-group">
-          <label class="input-group__label" for="tva">N° TVA :</label>
-          <input class="input" type="text" name="tva" id="tva" placeholder="0000123456789" />
+          <label class="input-group__label" for="tva">N° TVA</label>
+          <input class="input" type="text" name="tva" id="tva" placeholder="0000123456789" required />
         </div>
 
         <div class="input-group">
-          <label class="input-group__label" for="firstname">Prénom :</label>
-          <input class="input" type="text" name="firstname" id="firstname" placeholder="Jean" />
+          <label class="input-group__label" for="firstname">Prénom</label>
+          <input class="input" type="text" name="firstname" id="firstname" placeholder="Jean"
+            autocomplete="given-name" />
         </div>
 
         <div class="input-group">
-          <label class="input-group__label" for="lastname">Nom :</label>
-          <input class="input" type="text" name="lastname" id="lastname" placeholder="MARTIN" />
+          <label class="input-group__label" for="lastname">Nom</label>
+          <input class="input" type="text" name="lastname" id="lastname" placeholder="MARTIN"
+            autocomplete="family-name" />
         </div>
 
         <div class="input-group input-group--inline">
 
           <div class="input-radio">
-            <input type="radio" name="gender" value="male" id="male" />
+            <input type="radio" name="gender" value="male" id="male" autocomplete="sex" />
             <label class="input-group__label" for="male">Homme</label>
           </div>
 
           <div class="input-radio">
-            <input type="radio" name="gender" value="female" id="female" checked />
+            <input type="radio" name="gender" value="female" id="female" autocomplete="sex" />
             <label class="input-group__label" for="female">Femme</label>
           </div>
 
           <div class="input-radio">
-            <input type="radio" name="gender" value="other" id="other" checked />
+            <input type="radio" name="gender" value="other" id="other" autocomplete="sex" />
             <label class="input-group__label" for="other">Autre</label>
           </div>
         </div>
 
 
         <div class="input-group">
-          <label class="input-group__label" for="lastname">Email :</label>
-          <input class="input" type="text" name="mail" id="mail" placeholder="jean.martin@exiadiscount.fr" />
+          <label class="input-group__label" for="lastname">Email</label>
+          <input class="input" type="text" name="mail" id="mail" placeholder="jean.martin@exiadiscount.fr" autocomplete="email" />
         </div>
 
 
 
         <div class="input-group">
-          <label class="input-group__label" for="lastname">Téléphone :</label>
-          <input class="input" type="text" name="phone" id="phone" placeholder="00 11 22 33 44" />
+          <label class="input-group__label" for="lastname">Téléphone</label>
+          <input class="input" type="text" name="phone" id="phone" placeholder="00 11 22 33 44" autocomplete="tel"/>
         </div>
 
 
         <div class="input-group">
-          <label class="input-group__label" for="address">Adresse :</label>
-          <textarea class="input" text="text" name="address" id="address" placeholder="1 rue des lilas"
-            rows="3"></textarea>
+          <label class="input-group__label" for="address">Adresse</label>
+          <textarea class="input" type="text" name="address" id="address" placeholder="1 rue des lilas" rows="3" autocomplete="street-address"></textarea>
         </div>
 
 
         <div class="input-group">
-          <label class="input-group__label" for="city">Ville :</label>
-          <input class="input" text="text" name="city" id="city" placeholder="Dijon" />
+          <label class="input-group__label" for="city">Ville</label>
+          <input class="input" type="text" name="city" id="city" placeholder="Dijon" autocomplete="address-level2"/>
         </div>
 
 
         <div class="input-group">
-          <label class="input-group__label" for="code">Code postale :</label>
-          <input class="input" text="text" name="code" id="code" placeholder="21000" />
+          <label class="input-group__label" for="code">Code postale</label>
+          <input class="input" type="text" name="code" id="code" placeholder="21000" autocomplete="postal-code"/>
         </div>
 
         <div class="input-group input-group--inline">
-          <input class="input-button input-button--primary" type="submit" value="Suivant" disabled />
+          <input class="input-button input-button--primary js-stepper__submit-action" type="submit" value="Suivant" />
           <input class="input-button" type="reset" />
         </div>
       </form>
     </section>
 
-    <section class="section">
+    <section class="section js-stepper__step">
       <header class="title">Paiement</header>
 
-      <form action="#" method="post">
-
-
+      <form action="javascript:void(0)" method="post" class="js-stepper__form">
 
         <div class="input-group">
-          <label class="input-group__label" for="card_number">Numéro de carte :</label>
-          <input class="input" text="text" name="card_number" id="card_number" placeholder="0000 1111 2222 3333 4444" />
+          <label class="input-group__label" for="card_number">Numéro de carte</label>
+          <input class="input" type="text" name="card_number" id="card_number" placeholder="0000 1111 2222 3333 4444" autocomplete="cc-number"/>
         </div>
 
 
         <div class="input-group">
-          <label class="input-group__label" for="owner">Propriétaire :</label>
-          <input class="input" text="text" name="owner" id="owner" placeholder="Jean MARTIN" />
+          <label class="input-group__label" for="owner">Propriétaire</label>
+          <input class="input" type="text" name="owner" id="owner" placeholder="Jean MARTIN" />
         </div>
         <div class="input-group input-group--inline">
           <div class="input-group">
             <label class="input-group__label">
-              Expiration :
+              Expiration
             </label>
             <div class="input-group__subgroup input-group__subgroup--center">
-              <select class="input" name="month">
+              <select class="input" name="month" autocomplete="cc-exp-month">
                 <option>..</option>
                 <option>01</option>
                 <option>02</option>
@@ -177,7 +176,7 @@
                 <option>12</option>
               </select>
               <div class="input-group__separator">/</div>
-              <select class="input" name="year">
+              <select class="input" name="year" autocomplete="cc-exp-year">
                 <option>..</option>
                 <option>20</option>
                 <option>21</option>
@@ -189,13 +188,13 @@
           </div>
 
           <div class="input-group">
-            <label class="input-group__label" for="cvv">Crypto.</label>
-            <input class="input" type="password" name="cvv" id="cvv" placeholder="CVV" />
+            <label class="input-group__label" for="cvv">CVV</label>
+            <input class="input" type="password" name="cvv" id="cvv" placeholder="CVV" autocomplete="cc-csc"/>
           </div>
         </div>
 
         <div class="input-group input-group--inline">
-          <input class="input-button input-button--primary" type="submit" />
+          <input class="input-button input-button--primary js-stepper__submit-action" type="submit" />
           <input class="input-button" type="reset" />
         </div>
 
@@ -218,5 +217,6 @@
     </nav>
   </div>
 </body>
+<script type="module" src="assets/js/script.js"></script>
 
 </html>

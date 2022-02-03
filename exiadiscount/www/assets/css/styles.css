@@ -1,7 +1,8 @@
 :root {
   --lighten-primary: hsla(352, 84%, 85%, 1);
   --primary-color: hsla(352, 90%, 52%, 1);
-  --darken-primary: hsla(353, 90%, 39%, 1);
+  --dark-primary: hsla(353, 90%, 39%, 1);
+  --darken-primary: hsla(353, 90%, 32%, 1);
 }
 
 main {
@@ -25,7 +26,7 @@ body, textarea, form {
   flex-direction: column;
   align-items: center;
   margin-bottom: 8px;
-  background-color: var(--darken-primary);
+  background-color: var(--dark-primary);
   color: white;
 }
 
@@ -53,14 +54,27 @@ body, textarea, form {
 
 /* --- Section Component --- */
 
-.section:not(:last-child) {
-  margin-bottom: 32px;
+.section {
+  overflow: hidden;
+  transition: transform 0.5s ease-out,
+    opacity 0.5s ease-out;
+  visibility: visible;
+}
+
+.section:not(:first-child) {
+  margin-top: 32px;
+}
+
+.section.section--disabled {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-40px);
 }
 
 /* --- Menu Component --- */
 
 .menu__placeholder {
-  height: 60px;
+  height: 72px;
   width: 100%;
 }
 
@@ -70,7 +84,7 @@ body, textarea, form {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: var(--darken-primary);
+  background-color: var(--dark-primary);
   z-index: 1000;
 }
 
@@ -126,7 +140,7 @@ body, textarea, form {
   content: '';
   width: 32px;
   height: 4px;
-  background-color: var(--darken-primary);
+  background-color: var(--dark-primary);
 }
 
 /* --- Input Group Component --- */
@@ -143,8 +157,8 @@ body, textarea, form {
   flex-direction: row;
 }
 
-.input-group:not(:last-child) {
-  margin-bottom: 16px;
+.input-group:not(:first-child) {
+  margin-top: 16px;
 }
 
 .input-group>.input-group {
@@ -201,9 +215,11 @@ body, textarea, form {
   justify-content: center;
 }
 
-.input:not(:placeholder-shown), .input:focus {
+.input:not(:placeholder-shown),
+.input:focus,
+.input-button:active {
   outline: none;
-  border-color: hsla(0, 0%, 0%, 1);
+  border: 2px solid hsla(0, 0%, 0%, 1);
   box-shadow: inset 2px 0 0 hsla(0, 0%, 0%, 1);
 }
 
@@ -212,13 +228,28 @@ body, textarea, form {
   color: hsla(0, 0%, 0%, 0.3);
 }
 
-.input-button.input-button--primary:disabled {
-  background-color: hsla(0, 0%, 0%, 0.3);
-  border-color: transparent;
-}
 
 .input-button.input-button--primary {
   background-color: var(--primary-color);
   color: white;
   border-color: var(--primary-color);
+}
+
+.input-button.input-button--primary:disabled {
+  background-color: hsla(0, 0%, 0%, 0.3);
+  border-color: transparent;
+}
+
+.input-button.input-button--primary:focus,
+.input-button.input-button--primary:hover {
+  box-shadow: inset 2px 0 0 var(--darken-primary);
+  border-color: var(--darken-primary);
+  transition: box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.input-button.input-button--primary:active {
+  box-shadow: none;
+  background-color: var(--dark-primary);
+  border-color: var(--dark-primary);
+  transition: background-color 0.3s ease-out, border-color 0.3s ease-out;
 }
