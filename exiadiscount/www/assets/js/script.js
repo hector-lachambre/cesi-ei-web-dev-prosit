@@ -7,8 +7,16 @@ function main() {
 
     console.info("DOM Loaded");
 
+    // A simple way to develop JS components without external dependencies.
+    // This approach helps to better understand component-oriented frameworks like Angular, React, Vue.js... 
+    // It doesn't include all the behaviors of these frameworks but it should help you develop with them.
+
     withComponentApproach();
-    //withBasicApproach();
+
+
+    // A more classic approach without using components.
+    
+    // withBasicApproach();
 
 }
 
@@ -43,8 +51,11 @@ function withBasicApproach() {
 
         const nextSection = sections[index + 1];
 
+        if (!nextSection) return;
+
         nextSection.style.display = null;
 
+        // Let the only JS thread remove <display> property
         setTimeout(() => nextSection.classList.remove("section--disabled"), 0);
 
         nextSection

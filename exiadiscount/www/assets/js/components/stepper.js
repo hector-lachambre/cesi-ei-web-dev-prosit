@@ -14,6 +14,7 @@ export class StepperComponent extends Component {
 
 
     initState(props) {
+
         this._element
             .querySelectorAll(".js-stepper__step")
             .forEach(section => {
@@ -44,14 +45,14 @@ export class StepperComponent extends Component {
 
             if (index === 0) return;
 
-            const lastStep = this._state.steps[index - 1];
+            const previousStep = this._state.steps[index - 1];
 
-            step.section.style.display = lastStep.validated ? null : "none";
+            step.section.style.display = previousStep.validated ? null : "none";
             step.section
                 .querySelector(".js-stepper__submit-action")
-                .disabled = !lastStep.validated;
+                .disabled = !previousStep.validated;
 
-            setTimeout(() => step.section.classList.toggle("section--disabled", !lastStep.validated), 0);
+            setTimeout(() => step.section.classList.toggle("section--disabled", !previousStep.validated), 0);
 
         });
 
@@ -59,10 +60,10 @@ export class StepperComponent extends Component {
 
 
     _validateSection(section) {
-        let updated = this._state.steps
-            .find((item) => item.section === section);
 
-        updated.validated = true;
+        this._state.steps
+            .find((item) => item.section === section)
+            .validated = true;
 
         this.setState({
             steps: [...this._state.steps]
