@@ -56,8 +56,7 @@ export class StepperComponent extends Component {
         });
 
         const currentStep = this._state.steps
-            .filter((step) => step.validated)
-            .at(-1);
+            .filter((step) => !step.validated)[0];
 
         if (!currentStep) return;
 
