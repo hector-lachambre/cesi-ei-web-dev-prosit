@@ -11,13 +11,12 @@ function main() {
     // This approach helps to better understand component-oriented frameworks like Angular, React, Vue.js... 
     // It doesn't include all the behaviors of these frameworks but it should help you develop with them.
 
-    withComponentApproach();
+    // withComponentApproach();
 
 
     // A more classic approach without using components.
-    
-    // withBasicApproach();
 
+    withBasicApproach();
 }
 
 function withComponentApproach() {
