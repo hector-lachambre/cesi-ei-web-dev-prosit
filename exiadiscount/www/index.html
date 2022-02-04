@@ -39,10 +39,11 @@
 
           <div class="input-group">
             <select class="input">
-              <option class="input__option" value="f1">Fournisseur 1</option>
-              <option class="input__option" value="f2">Fournisseur 2</option>
-              <option class="input__option" value="f3">Fournisseur 3</option>
-              <option class="input__option" value="f4">Fournisseur 4</option>
+              <option value="" disabled selected>Selectionnez votre fournisseur</option>
+              <option value="f1">Fournisseur 1</option>
+              <option value="f2">Fournisseur 2</option>
+              <option value="f3">Fournisseur 3</option>
+              <option value="f4">Fournisseur 4</option>
             </select>
           </div>
 
@@ -165,8 +166,8 @@
                 Expiration
               </label>
               <div class="input-group__subgroup input-group__subgroup--center">
-                <select class="input" name="month" autocomplete="cc-exp-month">
-                  <option>..</option>
+                <select class="input" name="month" autocomplete="cc-exp-month" >
+                  <option value="" disabled selected>MM</option>
                   <option>01</option>
                   <option>02</option>
                   <option>03</option>
@@ -182,7 +183,7 @@
                 </select>
                 <div class="input-group__separator">/</div>
                 <select class="input" name="year" autocomplete="cc-exp-year">
-                  <option>..</option>
+                  <option value="" disabled selected>YY</option>
                   <option>20</option>
                   <option>21</option>
                   <option>22</option>

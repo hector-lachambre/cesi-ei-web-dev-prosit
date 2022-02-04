@@ -238,7 +238,7 @@ body, textarea, form {
   padding: 8px;
   width: 100%;
   min-height: 32px;
-  min-width: 60px;
+  min-width: 72px;
   display: flex;
   border-radius: 3px;
   border: solid 2px hsla(0, 0%, 0%, 0.2);
