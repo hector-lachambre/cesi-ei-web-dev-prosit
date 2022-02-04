@@ -8,9 +8,9 @@ main {
 
 .section {
     background-color: white;
-    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 
-                0 8px 10px 1px rgb(0 0 0 / 14%), 
-                0 3px 14px 2px rgb(0 0 0 / 12%);
+    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%),
+        0 8px 10px 1px rgb(0 0 0 / 14%),
+        0 3px 14px 2px rgb(0 0 0 / 12%);
     width: 100%;
     padding: 24px;
     margin: 0 auto;
@@ -30,7 +30,7 @@ main {
     background-color: white;
 }
 
-.menu.menu--desktop > .menu__navigation {
+.menu.menu--desktop>.menu__navigation {
     position: inherit;
     display: flex;
     justify-content: center;
@@ -45,4 +45,11 @@ main {
 .menu.menu--desktop .menu__item:hover {
     box-shadow: inset 0 -3px 0 hsla(0, 0%, 0%, 2);
     transition: box-shadow 0.3s ease;
+}
+
+/* --- Feedback --- */
+
+.feedback {
+    margin: 0 auto;
+    max-width: 600px;
 }

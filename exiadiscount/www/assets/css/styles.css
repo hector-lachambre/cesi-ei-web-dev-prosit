@@ -62,6 +62,32 @@ body, textarea, form {
   padding-bottom: 8px;
 }
 
+/* --- Feedback --- */
+
+.feedback {
+  display: none;
+  padding: 8px;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  text-align: center;
+  border: 2px solid;
+}
+
+.feedback.feedback--active {
+  display: block;
+}
+
+.feedback.feedback--error {
+  color: #d18410;
+  border-color: #d18410;
+}
+
+.feedback.feedback--success {
+  color: #23b323;
+  border-color: #23b323;
+}
+
+
 /* --- Section Component --- */
 
 .section {

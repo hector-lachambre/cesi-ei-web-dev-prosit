@@ -11,12 +11,12 @@ function main() {
     // This approach helps to better understand component-oriented frameworks like Angular, React, Vue.js... 
     // It doesn't include all the behaviors of these frameworks but it should help you develop with them.
 
-    // withComponentApproach();
+    withComponentApproach();
 
 
     // A more classic approach without using components.
 
-    withBasicApproach();
+    // withBasicApproach();
 }
 
 function withComponentApproach() {
@@ -26,6 +26,7 @@ function withComponentApproach() {
         document.querySelector(".js-stepper"),
         {
             onLastSubmit: (event, forms) => {
+
                 event.preventDefault();
 
                 const datas = Array.from(forms)
@@ -35,6 +36,16 @@ function withComponentApproach() {
                     });
 
                 service.create(datas);
+
+                const feedback = document.querySelector(".js-feedback");
+
+                feedback.innerHTML = "Une facture a bien été crée, malheureusement le service de gestion des factures n'est pas encore disponible :/"
+                feedback.classList.add("feedback--active", "feedback--error");
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                });
             }
         }
     );
@@ -60,6 +71,8 @@ function withBasicApproach() {
         nextSection
             .querySelector(".js-stepper__submit-action")
             .disabled = false;
+
+        setTimeout(() => sections[index + 1].scrollIntoView({behavior: "smooth"}), 0);
     }
 
 
@@ -75,6 +88,16 @@ function withBasicApproach() {
             });
 
         service.create(datas);
+
+        const feedback = document.querySelector(".js-feedback");
+
+        feedback.innerHTML = "Une facture a bien été crée, malheureusement le service de gestion des factures n'est pas encore disponible :/"
+        feedback.classList.add("feedback--active", "feedback--error");
+
+        setTimeout(() => window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        }), 0);
     }
 
     sections.slice(1).forEach((section) => {

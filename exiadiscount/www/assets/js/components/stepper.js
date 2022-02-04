@@ -53,9 +53,16 @@ export class StepperComponent extends Component {
                 .disabled = !previousStep.validated;
 
             setTimeout(() => step.section.classList.toggle("section--disabled", !previousStep.validated), 0);
-
         });
 
+        const currentStep = this._state.steps
+            .filter((step) => step.validated)
+            .at(-1);
+
+        if (!currentStep) return;
+
+        currentStep.section
+            .scrollIntoView({behavior: "smooth"});
     }
 
 
